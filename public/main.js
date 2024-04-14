@@ -7,7 +7,7 @@ const nameInput = document.getElementById('name-input')
 const messageForm = document.getElementById('message-form')
 const messageInput = document.getElementById('message-input')
 
-const messageTone = new Audio('/message-tone.mp3')
+const messageTone = new Audio('.src/message-tone.mp3')
 
 messageForm.addEventListener('submit', (e) => {
   e.preventDefault()
@@ -15,7 +15,7 @@ messageForm.addEventListener('submit', (e) => {
 })
 
 socket.on('clients-total', (data) => {
-  clientsTotal.innerText = `Total Clients: ${data}`
+  clientsTotal.innerText = `Online Users: ${data}`
 })
 
 function sendMessage() {
